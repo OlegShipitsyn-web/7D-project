@@ -94,20 +94,19 @@ $(document).ready(function() {
 		infinite: false,
 		slidesToScroll: 1,
 		slidesToShow: 5,
-		variableWidth: true,
 		prevArrow: '<button type="button" class="details__prevArrow details_arrow_product"><span></span></button>',
 		nextArrow: '<button type="button" class="details__nextArrow details_arrow_product"><span></span></button>',
 		responsive: [
 		    {
 		      breakpoint: 991,
 		      settings: {
-		        slidesToShow: 2
+		        slidesToShow: 3
 		      }
 		  },
 		  {
-			breakpoint: 800,
+			breakpoint: 768,
 			settings: {
-			  slidesToShow: 1
+			  slidesToShow: 2
 			}
 		  }
 	  	]
@@ -115,6 +114,8 @@ $(document).ready(function() {
 
 	$('.slider-cg').slick({
 		slidesToShow: 5,
+		centerPadding: '5px',
+		// centerMode: true,
 		responsive: [
 			{
 				breakpoint: 1200,
@@ -131,7 +132,7 @@ $(document).ready(function() {
 			{
 				breakpoint: 768,
 				settings: {
-					slidesToShow: 2
+					slidesToShow: 2,
 				}
 			},
 		]
