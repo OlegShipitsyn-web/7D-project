@@ -101,17 +101,42 @@ $(document).ready(function() {
 		    {
 		      breakpoint: 991,
 		      settings: {
-		        slidesToShow: 4
+		        slidesToShow: 2
 		      }
 		  },
 		  {
 			breakpoint: 800,
 			settings: {
-			  slidesToShow: 6
+			  slidesToShow: 1
 			}
 		  }
 	  	]
 	});
+
+	$('.slider-cg').slick({
+		slidesToShow: 5,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 4
+				}
+			},
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+		]
+	})
+
 	$('.banner__list').slick({
 		infinite: false,
 		slidesToScroll: 1,
