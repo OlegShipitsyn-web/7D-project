@@ -106,6 +106,7 @@ $(document).ready(function() {
 		  {
 			breakpoint: 768,
 			settings: {
+			  appendArrows: '.slider-arrows',
 			  slidesToShow: 2
 			}
 		  }
