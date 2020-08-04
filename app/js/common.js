@@ -142,10 +142,29 @@ $(document).ready(function() {
 	$('.banner__list').slick({
 		infinite: false,
 		slidesToScroll: 1,
-		slidesToShow: 5,
-		variableWidth: true,
+		slidesToShow: 3,
 		prevArrow: '<button type="button" class="banner__prevArrow details_arrow_product"><span></span></button>',
-		nextArrow: '<button type="button" class="banner__nextArrow details_arrow_product"><span></span></button>'
+		nextArrow: '<button type="button" class="banner__nextArrow details_arrow_product"><span></span></button>',
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
+		]
 	});
 
 
@@ -672,6 +691,8 @@ $(document).ready(function() {
 			else{
 				translateSidebar('.filter-wrap-position .sidebar_acc_body', '.cross .sidebar .accordion_item')
 				$('.sort_container').removeClass('pt-3').prependTo('.cross-col')
+
+				$('.sidebar_text').removeClass('p-3 m-0').appendTo('.sidebar')
 			}
 		}
 
