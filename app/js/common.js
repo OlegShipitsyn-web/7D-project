@@ -667,9 +667,11 @@ $(document).ready(function() {
 				translateSidebar('.cross .sidebar .sidebar_acc_body', '.filter-wrap-position')
 				$('.sort_container').addClass('pt-3').appendTo('.subaccordion-cg .sort')
 				// $('.cross__prise-and-avail-wrap').appendTo('.cross__item_img')
+				$('.sidebar_text').addClass('p-3 m-0').appendTo('.slider-mobile-col')
 			}
 			else{
 				translateSidebar('.filter-wrap-position .sidebar_acc_body', '.cross .sidebar .accordion_item')
+				$('.sort_container').removeClass('pt-3').prependTo('.cross-col')
 			}
 		}
 

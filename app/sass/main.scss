@@ -5332,7 +5332,21 @@
     top: -15px;
 }
 @media screen and (max-width: 991px){
+	section{
+		padding-top: 0px;
+	}
 	.cross{
+		.recently{
+			padding: 30px 0px;
+		}
+		.slider-heading{
+			margin-bottom: 15px;
+			padding-left: 5px;
+		}
+		.sidebar-col{
+			padding-right: 0;
+			padding-left: 0;
+		}
 		.sidebar{
 
 			.sidebar_acc_title{
@@ -5429,11 +5443,59 @@
 
 }
 @media screen and (max-width: 768px){
+	section{
+		padding: 0;
+	}
+	.search_out-of-header{
+		form{
+			border: none;
+		}
+		input{
+			border: 2px solid #d8d8d8;
+			border-right: none;
+		}
+		.btn{
+			font-size: 14px;
+			white-space: nowrap;
+			padding: 0.7em 0.7em!important;
+			color: #fff;
+			background-color: #4e4e4e;
+			border-radius: unset;
+		}
+	}
+	.header{
+		box-shadow: none;
+	}
+	.sticky{
+		box-shadow: 0px 7px 13px rgba(0, 0, 0, 0.13);
+	}
+	.header_search_wrap{
+		display: none;
+	}
+	.content-container{
+		padding: 10px;
+	}
+	.accordion-crossgroup{
+		margin: 0;
+	}
+	.cross__main-title{
+		order: -1;
+		margin: 0;
+	}
+	.cross__main-title h1{
+		font-size: calc(1vw + 16px);
+	}
 	.cross__avail{
 		color: #fff;
 	}
 	.cross-col{
 		padding: 15px 15px;
+	}
+	.main_mobile{
+		margin-top: 60px;
+		.container{
+			padding: 10px;
+		}
 	}
 	.cross{
 		.cross__list .cross__item .croos__price {
@@ -5496,7 +5558,14 @@
 				padding-top: 20px;
 				padding-bottom: 20px;
 				padding-left: 10px;
-				font-size: calc(3vw + 5px);
+				font-size: calc(1vw + 15px);
+			}
+			.open{
+				border-radius: unset!important;
+
+				.acc_head{
+					border-radius: unset!important;
+				}
 			}
 			.first{
 				top: 15px;
@@ -5568,6 +5637,7 @@
 						position: relative;
 						left: 0;
 						top: 0;
+						text-align: center;
 					}
 				}
 				.card__details_list{
@@ -5626,7 +5696,7 @@
 		margin-bottom: 15px;
 
 		h2{
-			font-size: calc(3px + 4vw);
+			font-size: calc(12px + 1vw);
 			display: inline;
 			white-space: nowrap;
 		}
@@ -5668,7 +5738,17 @@
 		font-size: 9px;
 	}
 	.cross-col{
-		padding: 15px 2px;
+		padding: 15px 15px;
+	}
+	.search_out-of-header{
+
+		.btn{
+			font-size: 12px;
+			padding: 1em;
+		}
+		input{
+			font-size: 12px;
+		}
 	}
 }
 
@@ -5693,5 +5773,8 @@
 		width: 40px;
 		height: 40px;
 		border: 1px solid #c1c1c1;
+	}
+	.sidebar_acc_body .sidebar_check button{
+		width: 108px;
 	}
 }
