@@ -5332,6 +5332,9 @@
 	top: -15px;
 }
 @media screen and (max-width: 991px) {
+	.slider-heading{
+    	padding-bottom: 0px;
+	}
 	.main_basket{
 		margin-top: 0;
 	}
@@ -5793,5 +5796,16 @@
 	}
 	.basket__control{
 		padding: 0 10px;
+	}
+}
+@media screen and (max-width: 1200px){
+	.slider-heading{
+		padding-left: 5px;
+    	padding-bottom: 25px;
+	}
+}
+@media screen and (max-width: 991px) {
+	.slider-heading{
+    	padding-bottom: 0px!important;
 	}
 }

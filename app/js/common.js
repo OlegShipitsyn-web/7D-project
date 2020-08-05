@@ -97,6 +97,12 @@ $(document).ready(function() {
 		prevArrow: '<button type="button" class="details__prevArrow details_arrow_product"><span></span></button>',
 		nextArrow: '<button type="button" class="details__nextArrow details_arrow_product"><span></span></button>',
 		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+				  slidesToShow: 4
+				}
+			},
 		    {
 		      breakpoint: 991,
 		      settings: {
@@ -669,30 +675,35 @@ $(document).ready(function() {
 			$(window).on('resize', translateAutoBrandItems)
 		}
 
-		function translateSidebar(item, destinationParent) {
+		function translateItem(item, destinationParent, classToAdd='', classToRemove='') {
 			$(item).each(function(index){
 				let localThis = $(this)
 				$(destinationParent).each(function(i){
 					if (i === index) {
-						localThis.appendTo($(this))
+						localThis.addClass(classToAdd)
+								 .removeClass(classToRemove)
+								 .appendTo($(this))
 					}
 				})
 			})
 		}
 
-		function translateSidebar_MEDIA(){
+		function translateItem_MEDIA(){
 
 			if (window.matchMedia('(max-width: 767px)').matches) {
-				translateSidebar('.cross .sidebar .sidebar_acc_body', '.filter-wrap-position')
+				translateItem('.cross .sidebar .sidebar_acc_body', '.filter-wrap-position')
 				$('.sort_container').addClass('pt-3').appendTo('.subaccordion-cg .sort')
 				// $('.cross__prise-and-avail-wrap').appendTo('.cross__item_img')
 				$('.sidebar_text').addClass('p-3 m-0').appendTo('.slider-mobile-col')
+				translateItem('.cross__item .cross__prise-and-avail-wrap', '.cross__item_img', 'cross__prise-and-avail-wrap_mobile')
 			}
 			else{
-				translateSidebar('.filter-wrap-position .sidebar_acc_body', '.cross .sidebar .accordion_item')
+				translateItem('.filter-wrap-position .sidebar_acc_body', '.cross .sidebar .accordion_item')
 				$('.sort_container').removeClass('pt-3').prependTo('.cross-col')
 
 				$('.sidebar_text').removeClass('p-3 m-0').appendTo('.sidebar')
+
+				translateItem('.cross__item .cross__prise-and-avail-wrap', '.cross__price_wrap', '', 'cross__prise-and-avail-wrap_mobile')
 			}
 		}
 
@@ -700,7 +711,7 @@ $(document).ready(function() {
 		// если мы находимся на странице "crossgroup.html"
 		if ($('.cross').length) {
 			new Accordion($('.cross .subaccordion-cg'), false);
-			translateSidebar_MEDIA()
-			$(window).on('resize', translateSidebar_MEDIA)
+			translateItem_MEDIA()
+			$(window).on('resize', translateItem_MEDIA)
 		}
 });
