@@ -1,1 +1,239 @@
-.custom-checkbox_wrap:before{display:none}.vendor-code_mobile{display:none}.term-string{display:none}.checkbox-content{display:flex;align-items:center}@media screen and (min-width:991.999px){.basket__table tbody tr td:first-child{display:flex;align-items:center;height:inherit}}@media screen and (max-width:1199px){.basket__content{flex-direction:column}.basket__table table{font-size:12px}}@media screen and (max-width:991px){.basket__table{margin-top:20px}.basket__main-title h1{font-size:20px;white-space:nowrap}.is-basket .basket__content{display:none}.basket__content_mobile .basket__info{margin:0 auto;text-align:center}.basket__content_mobile .basket__info p{margin-top:15px}.basket__content_mobile h3{text-align:center;color:#ff191c;font-weight:bolder;font-size:16px}.quantity{margin:0 auto}.total-price{white-space:nowrap;font-size:5px;transform:scale(2.8)}.quantity-wrapper{display:flex;flex-direction:column;align-items:center;height:inherit}.term-string{display:flex;margin-top:auto;transform:scale(1.2);margin:22px auto}.is-basket .global-wrapper,.is-checkout .global-wrapper{margin-top:130px}.basket .container{width:100%;max-width:100%}.basket{padding:25px 0}.basket label{align-items:center;flex-direction:column;justify-content:center;display:flex!important;margin-left:0!important}table label .custom-check{margin-right:0}.basket__table tbody td{padding:0;height:inherit;align-items:flex-start;min-width:100%}.quantity-heading{white-space:nowrap}.basket__table table tbody td:first-child{padding-left:10px;display:flex;flex-direction:column;margin:10px auto;justify-content:center;max-width:-webkit-fit-content;max-width:-moz-fit-content;max-width:fit-content;flex-shrink:2}.vendor-code_mobile{display:block;color:#f31f21;font-weight:500;padding-top:20px}.heading{transform:scale(1.2)}.price{font-size:13px;font-weight:bolder}.price-wrapper{vertical-align:baseline}.vendor-code_mobile span{color:#4e4e4e}.product-name{color:#f31f21!important;font-weight:500;padding-left:10px}.is-basket .term-heading,.is-basket .term-wrapper,.is-basket .vendor-code-heading,.is-basket .vendor-code-wrapper{display:none}}@media screen and (max-width:619px){.is-basket .sum-heading,.is-basket .sum-wrapper{display:none}.colspan-elem{display:none}.basket .custom-checkbox_wrap a{white-space:normal;text-align:center}.quantity button{width:23px;height:30px}}@media screen and (max-width:374px){.basket__table table{font-size:10px}}@media screen and (max-width:991px){}@media screen and (max-width:767px){.is-checkout .name{white-space:normal;font-size:12px;display:block;line-height:1.25}.is-checkout .table-cell{padding:8px;position:relative}.is-checkout .vendor-code_mobile{display:inline}.is-checkout .table-cell span{text-align:left}.is-checkout tfoot td{vertical-align:middle}.td-additional-info{padding-top:25px;font-size:90%;position:absolute;bottom:0}.is-checkout .name,.is-checkout .quantity-checkout{height:100px}.is-checkout .td-additional-info{font-size:90%}.basket__service_wrap h2{display:flex;flex-direction:column;align-items:flex-start}.basket__service_wrap h2 span{margin-left:0}.is-checkout .custom-checkbox_wrap{flex-direction:row;justify-content:flex-start}.delivery h2{flex-direction:row}.is-checkout .basket__area{margin-top:15px;margin-bottom:15px}.is-checkout .basket__area textarea{min-height:184px}.is-checkout h2{font-size:20px}}@media screen and (min-width:767px){.is-checkout .heading,.is-checkout .table-cell{display:table-cell!important}}
+.custom-checkbox_wrap:before {
+    display: none;
+}
+.vendor-code_mobile {
+    display: none;
+}
+.term-string {
+    display: none;
+}
+.checkbox-content {
+    display: flex;
+    align-items: center;
+}
+@media screen and (min-width: 991.999px) {
+    .basket__table tbody tr td:first-child {
+        display: flex;
+        align-items: center;
+        height: inherit;
+    }
+}
+@media screen and (max-width: 1199px) {
+    .basket__content {
+        flex-direction: column;
+    }
+    .basket__table table {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .basket__table {
+        margin-top: 20px;
+    }
+    .basket__main-title h1 {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+    .is-basket .basket__content {
+        display: none;
+    }
+    .basket__content_mobile .basket__info {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .basket__content_mobile .basket__info p {
+        margin-top: 15px;
+    }
+    .basket__content_mobile h3 {
+        text-align: center;
+        color: #ff191c;
+        font-weight: bolder;
+        font-size: 16px;
+    }
+    .quantity {
+        margin: 0 auto;
+    }
+    .total-price {
+        white-space: nowrap;
+        font-size: 5px;
+        transform: scale(2.8);
+    }
+    .quantity-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: inherit;
+    }
+    .term-string {
+        display: flex;
+        margin-top: auto;
+        transform: scale(1.2);
+        margin: 22px auto;
+    }
+    .is-basket .global-wrapper,
+    .is-checkout .global-wrapper {
+        margin-top: 130px;
+    }
+    .basket .container {
+        width: 100%;
+        max-width: 100%;
+    }
+    .basket {
+        padding: 25px 0!important;
+    }
+    .basket label {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        display: flex !important;
+        margin-left: 0 !important;
+    }
+    table label .custom-check {
+        margin-right: 0!important;
+    }
+    .basket__table tbody td {
+        padding: 0;
+        height: inherit;
+        align-items: flex-start;
+        min-width: 100%;
+    }
+    .quantity-heading {
+        white-space: nowrap;
+    }
+    .basket__table table tbody td:first-child {
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto;
+        justify-content: center;
+        max-width: -webkit-fit-content;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        flex-shrink: 2;
+    }
+    .vendor-code_mobile {
+        display: block;
+        color: #f31f21;
+        font-weight: 500;
+        padding-top: 20px;
+    }
+    .heading {
+        transform: scale(1.2);
+    }
+    .price {
+        font-size: 13px;
+        font-weight: bolder;
+    }
+    .price-wrapper {
+        vertical-align: baseline;
+    }
+    .vendor-code_mobile span {
+        color: #4e4e4e;
+    }
+    .product-name {
+        color: #f31f21 !important;
+        font-weight: 500;
+        padding-left: 10px;
+    }
+    .is-basket .term-heading,
+    .is-basket .term-wrapper,
+    .is-basket .vendor-code-heading,
+    .is-basket .vendor-code-wrapper {
+        display: none;
+    }
+}
+@media screen and (max-width: 619px) {
+    .is-basket .sum-heading,
+    .is-basket .sum-wrapper {
+        display: none;
+    }
+    .colspan-elem {
+        display: none;
+    }
+    .basket .custom-checkbox_wrap a {
+        white-space: normal;
+        text-align: center;
+    }
+    .quantity button {
+        width: 23px;
+        height: 30px;
+    }
+}
+@media screen and (max-width: 374px) {
+    .basket__table table {
+        font-size: 10px;
+    }
+    .product-name{
+        padding-left: 0;
+    }
+    .quantity button{
+
+    }
+}
+@media screen and (max-width: 991px) {
+}
+@media screen and (max-width: 767px) {
+    .is-checkout .name {
+        white-space: normal;
+        font-size: 12px;
+        display: block;
+        line-height: 1.25;
+    }
+    .is-checkout .table-cell {
+        padding: 8px;
+        position: relative;
+    }
+    .is-checkout .vendor-code_mobile {
+        display: inline;
+    }
+    .is-checkout .table-cell span {
+        text-align: left;
+    }
+    .is-checkout tfoot td {
+        vertical-align: middle;
+    }
+    .td-additional-info {
+        padding-top: 25px;
+        font-size: 90%;
+        position: absolute;
+        bottom: 0;
+    }
+    .is-checkout .name,
+    .is-checkout .quantity-checkout {
+        height: 100px;
+    }
+    .is-checkout .td-additional-info {
+        font-size: 90%;
+    }
+    .basket__service_wrap h2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .basket__service_wrap h2 span {
+        margin-left: 0;
+    }
+    .is-checkout .custom-checkbox_wrap {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .delivery h2 {
+        flex-direction: row;
+    }
+    .is-checkout .basket__area {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .is-checkout .basket__area textarea {
+        min-height: 184px;
+    }
+    .is-checkout h2 {
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 767px) {
+    .is-checkout .heading,
+    .is-checkout .table-cell {
+        display: table-cell !important;
+    }
+}

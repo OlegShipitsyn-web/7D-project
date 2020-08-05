@@ -5332,6 +5332,9 @@
 	top: -15px;
 }
 @media screen and (max-width: 991px) {
+	.main_basket{
+		margin-top: 0;
+	}
 	section {
 		padding-top: 0px;
    }
@@ -5776,4 +5779,19 @@
 		font-size: 3vw;
 		margin-bottom: 0;
    }
+}
+@media screen and (max-width: 350px){
+	.basket-col{
+		padding: 0;
+	}
+	.quantity>span {
+		width: 20px;
+	}
+	.quantity button {
+		width: unset;
+		height: 33px;
+	}
+	.basket__control{
+		padding: 0 10px;
+	}
 }
