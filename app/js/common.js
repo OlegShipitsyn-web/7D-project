@@ -88,7 +88,32 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		slidesToShow: 9,
 		prevArrow: '<button type="button" class="details__prevArrow"><span></span></button>',
-		nextArrow: '<button type="button" class="details__nextArrow"><span></span></button>'
+		nextArrow: '<button type="button" class="details__nextArrow"><span></span></button>',
+		responsive: [
+		    {
+		      breakpoint: 991,
+		      settings: {
+				slidesToScroll: 3,
+		        slidesToShow: 3
+		      }
+		  },
+		  {
+			breakpoint: 768,
+			settings: {
+			  appendArrows: '.slider-arrows',
+			  slidesToScroll: 2,
+			  slidesToShow: 2
+			}
+		  },
+		//   {
+		// 	breakpoint: 500,
+		// 	settings: {
+		// 	  appendArrows: '.slider-arrows',
+		// 	  slidesToScroll: 1,
+		// 	  slidesToShow: 1
+		// 	}
+		//   }
+	  	]
 	});
 	$('.cars_slider').slick({
 		infinite: false,
@@ -212,7 +237,9 @@ $(document).ready(function() {
         },
     });
 
-    $('.category__details_title, .card__details_title').matchHeight();
+	$('.category__details_title').matchHeight();
+	$('.card__details_title').matchHeight();
+	$('.card__details_list').matchHeight();
 
 	$('.car__slide, .category__list li, .card__details_item, .income__list > li').each(function(){
 	 	let exclink = $(this).find('a').attr('href');
@@ -457,7 +484,7 @@ $(document).ready(function() {
 					$('.node-search').append(`
 						<div class="col-6">
 							<div class="node">
-								<a href="#" class=\"node__btn node__btn_${index+1}\">
+								<a class=\"node__btn node__btn_${index+1}\">
 								<img src=\"${$(this).find('.details-category__img').attr('src')}\" class="node__img" alt="Узел">
 								<h2 class="node__title">${$(this).find('.details-category__name').text()}</h2>
 							</a>
@@ -620,7 +647,14 @@ $(document).ready(function() {
 							slideout.close();
 						  });
 			}
-			// увеличиваем количество открытий меню на одно
+
+			$('.node').each(function(){
+				$(this).click(function(){
+					$('html #menu').scrollTop(300)
+				})
+			})
+
+						// увеличиваем количество открытий меню на одно
 			timesMenuWasOpened++;
 		 })
 
@@ -714,4 +748,59 @@ $(document).ready(function() {
 			translateItem_MEDIA()
 			$(window).on('resize', translateItem_MEDIA)
 		}
+
+
+
+		// тестовая функция, добавляет топ запросов в каждый из unit-top элементов
+		$('header .details-category .unit__top').each(function(){
+			$(this).append(`
+			<ul>
+			<li>
+				<a href="#">Бачок ГУР</a>
+			</li>
+			<li>
+				<a href="#">Втулка маятникового рычага</a>
+			</li>
+			<li>
+				<a href="#">Гидроцилиндр</a>
+			</li>
+			<li>
+				<a href="#">Змеевик редуктора рулевого</a>
+			</li>
+			<li>
+				<a href="#">Кардан рулевой</a>
+			</li>
+			<li>
+				<a href="#">Кронштейн бачка ГУР</a>
+			</li>
+			<li>
+				<a href="#">Кронштейн ГУР</a>
+			</li>
+			<li>
+				<a href="#">Кронштейн рулевого цилиндра</a>
+			</li>
+			<li>
+				<a href="#">Кронштейн рулевой колонки</a>
+			</li>
+			<li>
+				<a href="#">Муфта рулевого вала</a>
+			</li>
+			<li>
+				<a href="#">Наконечник рулевой тяги левый</a>
+			</li>
+			<li>
+				<a href="#">Наконечник рулевой тяги правый</a>
+			</li>
+			<li>
+				<a href="#">Патрубок</a>
+			</li>
+			<li>
+				<a href="#">Плата фиксации</a>
+			</li>
+			<li>
+				<a href="#">Подушка безопасности</a>
+			</li>
+		</ul>
+			`)
+		})
 });
