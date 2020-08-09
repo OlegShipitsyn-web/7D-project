@@ -560,7 +560,7 @@ $(document).ready(function() {
 
 																	})
 
-																	// встаиваем все айтемы под букву
+																	// встраиваем все айтемы под букву
 																	return sumOfItems.map((x) => x)
 
 															})()
@@ -648,11 +648,11 @@ $(document).ready(function() {
 						  });
 			}
 
-			$('.node').each(function(){
-				$(this).click(function(){
-					$('html #menu').scrollTop(300)
-				})
-			})
+			// $('.node').each(function(){
+			// 	$(this).click(function(){
+			// 		$('html #menu').scrollTop(300)
+			// 	})
+			// })
 
 						// увеличиваем количество открытий меню на одно
 			timesMenuWasOpened++;
