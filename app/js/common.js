@@ -69,7 +69,8 @@ $(document).ready(function() {
 	  	slidesToScroll: 1,
 	  	arrows: false,
 	  	fade: true,
-	  	asNavFor: '.slider-nav'
+		  asNavFor: '.slider-nav',
+		  verticalSwiping: true,
 	});
 	$('.slider-nav').slick({
 		lazyLoad: 'ondemand',
@@ -78,18 +79,26 @@ $(document).ready(function() {
 	  	slidesToScroll: 1,
 	  	asNavFor: '.slider-for',
 	  	dots: false,
-	  	centerMode: true,
+		centerMode: true,
+		verticalSwiping: true,
 	  	focusOnSelect: true,
 	  	prevArrow: '<button type="button" class="slider__prevArrow"><span></span></button>',
 		nextArrow: '<button type="button" class="slider__nextArrow"><span></span></button>'
 	});
 	$('.car__control_wrap').slick({
 		infinite: false,
-		slidesToScroll: 1,
-		slidesToShow: 9,
+		slidesToScroll: 8,
+		slidesToShow: 8,
 		prevArrow: '<button type="button" class="details__prevArrow"><span></span></button>',
 		nextArrow: '<button type="button" class="details__nextArrow"><span></span></button>',
 		responsive: [
+			{
+				breakpoint: 1199,
+				settings: {
+				  slidesToScroll: 5,
+				  slidesToShow: 5
+				}
+			},
 		    {
 		      breakpoint: 991,
 		      settings: {
@@ -115,7 +124,8 @@ $(document).ready(function() {
 		//   }
 	  	]
 	});
-	$('.cars_slider').slick({
+
+	const carsSlider_OPTIONS = {
 		infinite: false,
 		slidesToScroll: 1,
 		slidesToShow: 5,
@@ -142,7 +152,38 @@ $(document).ready(function() {
 			}
 		  }
 	  	]
-	});
+	}
+
+
+	// исправление бага со слайдерами на product.html
+
+	function initializeCarsSlider(item){
+		return $(item).slick(carsSlider_OPTIONS);
+	}
+
+	// если мы находимся на странице product.html
+	if($('.product').length){
+		// создаём 2 переменные-счетчика для слайдеров из табов
+		let timesSlickWasInitialized = 0
+		let timesSlickWasInitialized2 = 0
+
+		// по клику на нужный таб инициализируем каждый из слайдеров но не более одного раза
+		$('.tabs_check').click(function(){
+			if(timesSlickWasInitialized === 0){
+				if ( $(this).index() === 1 ) initializeCarsSlider('.cars_slider_multiple');
+				++timesSlickWasInitialized;
+			}
+			if(timesSlickWasInitialized2 === 0){
+				if ( $(this).index() === 0 ) initializeCarsSlider('.cars_slider');
+				++timesSlickWasInitialized2;
+			}
+			
+		})
+
+	}
+
+	initializeCarsSlider('.cars_slider')
+
 
 	$('.slider-cg').slick({
 		slidesToShow: 5,
@@ -803,4 +844,32 @@ $(document).ready(function() {
 		</ul>
 			`)
 		})
+
+
+		function handlePopup() {
+			$('.popup-content').css({display: 'block'})
+			$('.popup-content').text($(this).find('.popup-text').text())
+			$('.popup-arrow').css({display: 'none'})
+			$(this).find('.popup-arrow').css({display: 'block'})
+			$(this).find('.car__info_btn').css({background: '#ff191c', color: '#fff'})
+			if($(this).index() === 0){
+				$(this).parent().find('.popup-content').css({marginRight: 'auto'})
+			}
+			
+		}
+
+		$('.car__info_wrap').each(function() {
+			$(this).on('click mouseover', handlePopup)
+		})
+
+		$(document).on('mouseup mouseout',function (e){
+			var div = $(".popup-content, .popup-arrow"); 
+			if (!div.is(e.target) && div.has(e.target).length === 0) { 
+				div.hide(); // скрываем его
+				$('.car__info_btn').css({background: '#fff', color: '#4e4e4e'})
+			}
+		})
+		
+
+
 });
